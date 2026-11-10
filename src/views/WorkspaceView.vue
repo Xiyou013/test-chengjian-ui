@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import ManagementPageHeader from '@chengjian/ui-web/components/navigation/ManagementPageHeader.vue';
+import { ManagementPageHeader } from '@chengjian/ui-web'
 import { Button as TButton } from 'tdesign-vue-next';
 
 function handleAdd() {

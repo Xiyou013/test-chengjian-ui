@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
-    "@chengjian/ui-web": "0.2.0",
+    "@chengjian/ui-web": "0.2.1",
     "less": "4.6.7",
     "pinia": "^4.0.3",
     "tdesign-vue-next": "1.20.5",

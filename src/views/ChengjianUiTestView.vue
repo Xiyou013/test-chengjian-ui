@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import ManagementPageHeader from '@chengjian/ui-web/components/navigation/ManagementPageHeader.vue'
+import { ManagementPageHeader } from '@chengjian/ui-web'
 import { Button as TButton } from 'tdesign-vue-next'
 // import 'tdesign-vue-next/es/style/index.css'
 // import '@chengjian/ui-web/theme'
