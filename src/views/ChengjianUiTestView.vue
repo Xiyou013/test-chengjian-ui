@@ -2,8 +2,8 @@
 import { ref } from 'vue'
 import ManagementPageHeader from '@chengjian/ui-web/components/navigation/ManagementPageHeader.vue'
 import { Button as TButton } from 'tdesign-vue-next'
-import 'tdesign-vue-next/es/style/index.css'
-import '@chengjian/ui-web/theme'
+// import 'tdesign-vue-next/es/style/index.css'
+// import '@chengjian/ui-web/theme'
 
 const message = ref('')
 function handleAdd() {
