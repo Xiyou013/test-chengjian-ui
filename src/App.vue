@@ -32,7 +32,9 @@ const navigation = routes.flatMap((item) =>
       </aside>
       <main class="main-content">
         <div class="breadcrumb"><span>工作空间</span><span class="crumb-separator">/</span><span>{{ route.meta.title }}</span></div>
-        <RouterView />
+        <div class="route-content" tabindex="0" role="region" aria-label="页面内容">
+          <RouterView />
+        </div>
 
       </main>
     </div>
