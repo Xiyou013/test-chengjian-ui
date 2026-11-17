@@ -12,3 +12,18 @@
   .workspace { display: flex; flex-direction: column; }
   .sidebar { flex: none; overflow-x: auto; overflow-y: hidden; }
 }
+
+/* Nested sidebar navigation */
+.nav-group-toggle { width: 100%; border: 0; background: transparent; font: inherit; text-align: left; cursor: pointer; }
+.nav-group-toggle.group-active { color: #2867d8; }
+.group-arrow { margin-left: auto; font-size: 20px; }
+.submenu { display: grid; gap: 3px; padding: 3px 0 3px 18px; }
+.submenu-link { height: 39px; font-size: 13px; }
+.submenu-dot { width: 6px; height: 6px; border-radius: 50%; background: #b5c3d2; margin: 0 6px; flex: none; }
+.submenu-link.active .submenu-dot { background: #2867d8; }
+@media (max-width: 650px) {
+  .nav-group { display: flex; align-items: center; }
+  .submenu { display: flex; padding: 0 3px; }
+  .submenu-link { white-space: nowrap; }
+  .group-arrow { margin-left: 2px; }
+}

@@ -18,7 +18,17 @@ export const routes: RouteRecordRaw[] = [
     { path: '/progress', name: 'progress', component: WorkspaceView, meta: { title: '建设进度', menu: { label: '建设进度', icon: 'chart' }, description: '跟踪建设任务与项目进展。' } },
     { path: '/documents', name: 'documents', component: WorkspaceView, meta: { title: '资料中心', menu: { label: '资料中心', icon: 'document' }, description: '归集和查阅项目相关资料。' } },
     { path: '/settings', name: 'settings', component: WorkspaceView, meta: { title: '系统设置', menu: { label: '系统设置', icon: 'settings' }, description: '管理系统配置与偏好设置。' } },
-    { path: '/testCJui', name: 'testCJui', component: TestChengJianUIView, meta: { title: 'ui试验', menu: { label: '城建ui试验', icon: 'settings' }, description: '城建ui组件试验。' } },
+    {
+      path: '/testCJui',
+      name: 'testCJui',
+      redirect: { name: 'testCJui-basic' },
+      meta: { title: '城建ui试验', menu: { label: '城建ui试验', icon: 'settings' } },
+      children: [
+        { path: 'basic', name: 'testCJui-basic', component: TestChengJianUIView, meta: { title: '基础组件', menu: { label: '基础组件', icon: 'grid' } } },
+        { path: 'form-selection', name: 'testCJui-form-selection', component: () => import('../views/FormSelectionView.vue'), meta: { title: '表单选择', menu: { label: '表单选择', icon: 'document' } } },
+        { path: 'navigation-layout', name: 'testCJui-navigation-layout', component: () => import('../views/FormSelectionView.vue'), meta: { title: '导航布局', menu: { label: '导航布局', icon: 'document' } } },
+      ],
+    },
 ]
 
 const router = createRouter({
