@@ -6,8 +6,9 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
-import 'tdesign-vue-next/es/style/index.css'
-import '@chengjian/ui-web/theme'
+// import 'tdesign-vue-next/es/style/index.css'
+// import '@chengjian/ui-web/theme'
+import '@chengjian/foundation-web/style.css';
 
 const app = createApp(App)
 

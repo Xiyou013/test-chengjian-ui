@@ -24,9 +24,9 @@ export const routes: RouteRecordRaw[] = [
       redirect: { name: 'testCJui-basic' },
       meta: { title: '城建ui试验', menu: { label: '城建ui试验', icon: 'settings' } },
       children: [
-        { path: 'basic', name: 'testCJui-basic', component: TestChengJianUIView, meta: { title: '基础组件', menu: { label: '基础组件', icon: 'grid' } } },
-        { path: 'form-selection', name: 'testCJui-form-selection', component: () => import('../views/FormSelectionView.vue'), meta: { title: '表单选择', menu: { label: '表单选择', icon: 'document' } } },
-        { path: 'navigation-layout', name: 'testCJui-navigation-layout', component: () => import('../views/FormSelectionView.vue'), meta: { title: '导航布局', menu: { label: '导航布局', icon: 'document' } } },
+        // { path: 'basic', name: 'testCJui-basic', component: TestChengJianUIView, meta: { title: '基础组件', menu: { label: '基础组件', icon: 'grid' } } },
+        // { path: 'form-selection', name: 'testCJui-form-selection', component: () => import('../views/FormSelectionView.vue'), meta: { title: '表单选择', menu: { label: '表单选择', icon: 'document' } } },
+        { path: 'navigation-layout', name: 'testCJui-navigation-layout', component: () => import('../views/NavigationLayout.vue'), meta: { title: '导航布局', menu: { label: '导航布局', icon: 'document' } } },
       ],
     },
 ]
