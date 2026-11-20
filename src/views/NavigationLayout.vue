@@ -1,5 +1,15 @@
 <template>
     <div class="cj-ui">
+        <c-back-top container=".route-content" :visible-height="0" size="medium" :offset="['20px', '20px']"
+            theme="light"></c-back-top>
+        <div class="pilot">
+            <c-space>
+                <!-- 这里 container 指的是项目之前改的固定视口  -->
+                <c-affix ref="affix" container=".route-content" :offset-top="10" :offset-bottom="20">
+                    <c-button>固钉</c-button>
+                </c-affix>
+            </c-space>
+        </div>
         <div class="pilot">
             <c-space class="cj-ui" size="24px" break-line>
                 <c-button theme="primary">
@@ -131,6 +141,43 @@
 
         </div>
         <div class="pilot">
+            <div class="anchor-demo anchor-container-demo">
+                <c-anchor container="#anchor-container" @click="handleClick">
+                    <c-anchor-item href="#cj-anchor-content-1" title="content-1" />
+                    <c-anchor-item href="#cj-anchor-content-2" title="content-2" />
+                    <c-anchor-item href="#cj-anchor-content-3" title="content-3" />
+                    <c-anchor-item href="#cj-anchor-content-4" title="content-4" />
+                </c-anchor>
+                <c-space id="anchor-container" direction="vertical" :size="0">
+                    <div id="cj-anchor-content-1" class="anchor-content-1">anchor-content-1</div>
+                    <div id="cj-anchor-content-2" class="anchor-content-2">anchor-content-2</div>
+                    <div id="cj-anchor-content-3" class="anchor-content-3">anchor-content-3</div>
+                    <div id="cj-anchor-content-4" class="anchor-content-4">anchor-content-4</div>
+                    <div id="cj-anchor-content-5" class="anchor-content-5">anchor-content-5</div>
+                </c-space>
+            </div>
+        </div>
+        <div class="pilot">
+            <c-breadcrumb :separator="() => '/'" style="flex-wrap: wrap; row-gap: var(--td-comp-margin-xs)">
+                <c-breadcrumb-item :to="{ path: '/' }">页面1</c-breadcrumb-item>
+                <c-breadcrumb-item href="http://tdesign.tencent.com/">页面2</c-breadcrumb-item>
+                <c-breadcrumb-item @click="onClickItem">页面3</c-breadcrumb-item>
+            </c-breadcrumb>
+            <div style="margin-top: 20px">点击计数器：{{ count }}</div>
+        </div>
+        <div class="pilot">
+
+        </div>
+        <div class="pilot">
+
+        </div>
+        <div class="pilot">
+
+        </div>
+        <div class="pilot">
+
+        </div>
+        <div class="pilot">
 
         </div>
         <div class="pilot">
@@ -150,11 +197,10 @@ import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 import {
     CButton, CIcon, CSpace, CSlider, COption, CSelect, CLink, type CLinkProps
     , CTypographyParagraph, CDivider, CCol, CRow, CAside, CContent, CFooter, CHeader, CLayout
-    ,
+    , CAffix, CAnchor, CAnchorItem, CBackTop, CBreadcrumb, CBreadcrumbItem
 
 } from '@chengjian/foundation-web';
-import type { CButtonProps } from '@chengjian/foundation-web';
-import type { TypographyEllipsis } from '@chengjian/foundation-web';
+import type { CButtonProps, TypographyEllipsis, CAnchorProps, CBreadcrumbItemProps } from '@chengjian/foundation-web';
 // import '@chengjian/foundation-web/style.css';
 import {
     createLucideIcon, CloudDownload, CloudUpload, Plus, Search, Tag, ArrowUp, Calendar
@@ -202,6 +248,16 @@ const ellipsisState1: TypographyEllipsis = {
 };
 
 const size = ref(8);
+
+const handleClick: CAnchorProps['onClick'] = ({ e, href, title }) => {
+    e.preventDefault();
+    console.log('click', href, title);
+};
+
+const count = ref(0);
+const onClickItem: CBreadcrumbItemProps['onClick'] = () => {
+    count.value += 1;
+};
 
 </script>
 
@@ -296,6 +352,42 @@ const size = ref(8);
 .space-size-slider {
     box-sizing: border-box;
     padding: 4px 8px 0;
+}
+
+.anchor-container-demo {
+    display: flex;
+}
+
+#anchor-container {
+    flex-grow: 1;
+    height: 200px;
+    overflow: auto;
+}
+
+#anchor-container div {
+    text-align: center;
+    font-size: 22px;
+    line-height: 100px;
+}
+
+#anchor-container .anchor-content-1 {
+    background: #ecf2fe;
+}
+
+#anchor-container .anchor-content-2 {
+    background: #d4e3fc;
+}
+
+#anchor-container .anchor-content-3 {
+    background: #bbd3fb;
+}
+
+#anchor-container .anchor-content-4 {
+    background: #96bbf8;
+}
+
+#anchor-container .anchor-content-5 {
+    background: #699ef5;
 }
 </style>
 
