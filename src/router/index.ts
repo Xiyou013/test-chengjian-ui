@@ -26,7 +26,8 @@ export const routes: RouteRecordRaw[] = [
       children: [
         // { path: 'basic', name: 'testCJui-basic', component: TestChengJianUIView, meta: { title: '基础组件', menu: { label: '基础组件', icon: 'grid' } } },
         // { path: 'form-selection', name: 'testCJui-form-selection', component: () => import('../views/FormSelectionView.vue'), meta: { title: '表单选择', menu: { label: '表单选择', icon: 'document' } } },
-        { path: 'navigation-layout', name: 'testCJui-navigation-layout', component: () => import('../views/NavigationLayout.vue'), meta: { title: '导航布局', menu: { label: '导航布局', icon: 'document' } } },
+        { path: 'navigation-layout', name: 'testCJui-navigation-layout', component: () => import('../views/NavigationLayout.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: 'foundation-web-ui测试', icon: 'document' } } },
+        { path: 'foundation-web-ui-two', name: 'foundation-web-ui-two', component: () => import('../views/foundationWebUiTwo.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: 'foundation-web-ui测试', icon: 'document' } } },
       ],
     },
 ]

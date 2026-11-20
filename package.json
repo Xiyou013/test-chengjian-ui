@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
-    "@chengjian/foundation-web": "^0.1.1",
+    "@chengjian/foundation-web": "^0.1.2",
     "@lucide/vue": "^1.73.0",
     "less": "4.6.7",
     "pinia": "^4.0.3",
