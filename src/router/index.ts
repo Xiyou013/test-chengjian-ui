@@ -28,6 +28,7 @@ export const routes: RouteRecordRaw[] = [
         // { path: 'form-selection', name: 'testCJui-form-selection', component: () => import('../views/FormSelectionView.vue'), meta: { title: '表单选择', menu: { label: '表单选择', icon: 'document' } } },
         { path: 'navigation-layout', name: 'testCJui-navigation-layout', component: () => import('../views/NavigationLayout.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: 'foundation-web-ui测试', icon: 'document' } } },
         { path: 'foundation-web-ui-two', name: 'foundation-web-ui-two', component: () => import('../views/foundationWebUiTwo.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: 'foundation-web-ui测试', icon: 'document' } } },
+        { path: 'foundation-web-ui-three', name: 'foundation-web-ui-three', component: () => import('../views/foundationWebUiThree.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: 'foundation-web-ui测试', icon: 'document' } } },
       ],
     },
 ]
