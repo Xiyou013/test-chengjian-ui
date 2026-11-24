@@ -26,9 +26,10 @@ export const routes: RouteRecordRaw[] = [
       children: [
         // { path: 'basic', name: 'testCJui-basic', component: TestChengJianUIView, meta: { title: '基础组件', menu: { label: '基础组件', icon: 'grid' } } },
         // { path: 'form-selection', name: 'testCJui-form-selection', component: () => import('../views/FormSelectionView.vue'), meta: { title: '表单选择', menu: { label: '表单选择', icon: 'document' } } },
-        { path: 'navigation-layout', name: 'testCJui-navigation-layout', component: () => import('../views/NavigationLayout.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: 'foundation-web-ui测试', icon: 'document' } } },
-        { path: 'foundation-web-ui-two', name: 'foundation-web-ui-two', component: () => import('../views/foundationWebUiTwo.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: 'foundation-web-ui测试', icon: 'document' } } },
-        { path: 'foundation-web-ui-three', name: 'foundation-web-ui-three', component: () => import('../views/foundationWebUiThree.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: 'foundation-web-ui测试', icon: 'document' } } },
+        { path: 'navigation-layout', name: 'testCJui-navigation-layout', component: () => import('../views/NavigationLayout.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '基础、布局、导航', icon: 'document' } } },
+        { path: 'foundation-web-ui-two', name: 'foundation-web-ui-two', component: () => import('../views/foundationWebUiTwo.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '输入', icon: 'document' } } },
+        { path: 'foundation-web-ui-three', name: 'foundation-web-ui-three', component: () => import('../views/foundationWebUiThree.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '数据展示', icon: 'document' } } },
+        { path: 'foundation-web-ui-four', name: 'foundation-web-ui-four', component: () => import('../views/foundationWebUiFour.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: 'foundation-web-ui测试', icon: 'document' } } },
       ],
     },
 ]
