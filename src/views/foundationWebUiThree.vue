@@ -536,9 +536,12 @@ const columns = ref<NonNullable<CTableProps['columns']>>([
         colKey: 'status',
         title: '申请状态',
         cell: (h, { row }) => {
-            return h(CTag, { shape: 'round', theme: statusNameListMap[row.status].theme, variant: 'light-outline' }, () => [
-                statusNameListMap[row.status].icon,
-                statusNameListMap[row.status].label,
+            const status = statusNameListMap[row.status];
+            // 状态不存在时，显示占位符，避免页面报错
+            if (!status) return '-';
+            return h(CTag, { shape: 'round', theme: status.theme, variant: 'light-outline' }, () => [
+                status.icon,
+                status.label,
             ]);
         },
     },

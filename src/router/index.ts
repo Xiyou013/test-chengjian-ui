@@ -29,7 +29,8 @@ export const routes: RouteRecordRaw[] = [
         { path: 'navigation-layout', name: 'testCJui-navigation-layout', component: () => import('../views/NavigationLayout.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '基础、布局、导航', icon: 'document' } } },
         { path: 'foundation-web-ui-two', name: 'foundation-web-ui-two', component: () => import('../views/foundationWebUiTwo.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '输入', icon: 'document' } } },
         { path: 'foundation-web-ui-three', name: 'foundation-web-ui-three', component: () => import('../views/foundationWebUiThree.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '数据展示', icon: 'document' } } },
-        { path: 'foundation-web-ui-four', name: 'foundation-web-ui-four', component: () => import('../views/foundationWebUiFour.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: 'foundation-web-ui测试', icon: 'document' } } },
+        { path: 'foundation-web-ui-four', name: 'foundation-web-ui-four', component: () => import('../views/foundationWebUiFour.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '消息提示', icon: 'document' } } },
+        { path: 'foundation-web-ui-five', name: 'foundation-web-ui-five', component: () => import('../views/foundationWebUiFive.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '消息提示', icon: 'document' } } },
       ],
     },
 ]
