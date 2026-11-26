@@ -21,16 +21,17 @@ export const routes: RouteRecordRaw[] = [
     {
       path: '/testCJui',
       name: 'testCJui',
-      redirect: { name: 'testCJui-basic' },
+      redirect: { name: 'testCJui-navigation-layout' },
       meta: { title: '城建ui试验', menu: { label: '城建ui试验', icon: 'settings' } },
       children: [
         // { path: 'basic', name: 'testCJui-basic', component: TestChengJianUIView, meta: { title: '基础组件', menu: { label: '基础组件', icon: 'grid' } } },
         // { path: 'form-selection', name: 'testCJui-form-selection', component: () => import('../views/FormSelectionView.vue'), meta: { title: '表单选择', menu: { label: '表单选择', icon: 'document' } } },
-        { path: 'navigation-layout', name: 'testCJui-navigation-layout', component: () => import('../views/NavigationLayout.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '基础、布局、导航', icon: 'document' } } },
-        { path: 'foundation-web-ui-two', name: 'foundation-web-ui-two', component: () => import('../views/foundationWebUiTwo.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '输入', icon: 'document' } } },
-        { path: 'foundation-web-ui-three', name: 'foundation-web-ui-three', component: () => import('../views/foundationWebUiThree.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '数据展示', icon: 'document' } } },
-        { path: 'foundation-web-ui-four', name: 'foundation-web-ui-four', component: () => import('../views/foundationWebUiFour.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '消息提示', icon: 'document' } } },
-        { path: 'foundation-web-ui-five', name: 'foundation-web-ui-five', component: () => import('../views/foundationWebUiFive.vue'), meta: { title: 'foundation-web-ui测试', menu: { label: '消息提示', icon: 'document' } } },
+        { path: 'navigation-layout', name: 'testCJui-navigation-layout', component: () => import('../views/NavigationLayout.vue'), meta: { title: '基础、布局、导航', menu: { label: '基础、布局、导航', icon: 'document' } } },
+        { path: 'foundation-web-ui-two', name: 'foundation-web-ui-two', component: () => import('../views/foundationWebUiTwo.vue'), meta: { title: '输入', menu: { label: '输入', icon: 'document' } } },
+        { path: 'foundation-web-ui-three', name: 'foundation-web-ui-three', component: () => import('../views/foundationWebUiThree.vue'), meta: { title: '数据展示', menu: { label: '数据展示', icon: 'document' } } },
+        { path: 'foundation-web-ui-four', name: 'foundation-web-ui-four', component: () => import('../views/foundationWebUiFour.vue'), meta: { title: '消息提示', menu: { label: '消息提示', icon: 'document' } } },
+        { path: 'foundation-web-ui-five', name: 'foundation-web-ui-five', component: () => import('../views/foundationWebUiFive.vue'), meta: { title: '智能对话', menu: { label: '智能对话', icon: 'document' } } },
+        { path: 'foundation-web-ui-six', name: 'foundation-web-ui-six', component: () => import('../views/foundationWebUiSix.vue'), meta: { title: 'foundation-web-chat测试', menu: { label: '消息提示', icon: 'document' } } },
       ],
     },
 ]

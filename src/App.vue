@@ -5,6 +5,7 @@ import AppIcon from './components/AppIcon.vue'
 import { routes } from './router'
 
 const route = useRoute()
+const routeContent = ref<HTMLElement | null>(null)
 const navigation = routes.flatMap((item) => {
   if (!item.meta?.menu) return []
   const children = (item.children ?? []).flatMap((child) =>
@@ -28,7 +29,9 @@ watch(() => route.path, () => {
       expandedMenus.value.push(item.path)
     }
   }
-}, { immediate: true })
+  // Router scroll behavior only applies to the window; pages scroll inside this element.
+  routeContent.value?.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+}, { immediate: true, flush: 'post' })
 </script>
 
 <template>
@@ -68,7 +71,7 @@ watch(() => route.path, () => {
       </aside>
       <main class="main-content">
         <div class="breadcrumb"><span>工作空间</span><template v-for="matched in route.matched" :key="matched.path"><template v-if="matched.meta.title"><span class="crumb-separator">/</span><span>{{ matched.meta.title }}</span></template></template></div>
-        <div class="route-content" tabindex="0" role="region" aria-label="页面内容">
+        <div ref="routeContent" class="route-content" tabindex="0" role="region" aria-label="页面内容">
           <RouterView />
         </div>
 
