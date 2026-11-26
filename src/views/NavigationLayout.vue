@@ -65,6 +65,26 @@
         </div>
         <div class="pilot">
             <c-space break-line style="white-space: nowrap">
+                <li class="file-icon-demo__card">
+                    <ExcelIcon :size="24" class="file-icon-demo__icon" />
+                    <div class="file-icon-demo__details">
+                        <span class="file-icon-demo__filename" title="excel-file.xlsx">excel-file.xlsx</span>
+                        <code class="file-icon-demo__component">ExcelIcon</code>
+                    </div>
+                </li>
+                <ul class="file-icon-demo">
+                    <li v-for="file in files" :key="file.componentName" class="file-icon-demo__card">
+                        <c-icon :icon="file.icon" :size="24" class="file-icon-demo__icon" />
+                        <div class="file-icon-demo__details">
+                            <span class="file-icon-demo__filename" :title="file.name">{{ file.name }}</span>
+                            <code class="file-icon-demo__component">{{ file.componentName }}</code>
+                        </div>
+                    </li>
+                </ul>
+            </c-space>
+        </div>
+        <div class="pilot">
+            <c-space break-line style="white-space: nowrap">
                 <c-link theme="default" :prefix-icon="renderPrefixIcon" :on-click="clickLink"> 跳转链接 </c-link>
                 <c-link theme="primary" underline href="https://tdesign.tencent.com/" target="_self">
                     <template #prefix-icon>
@@ -399,6 +419,10 @@ import {
     , CMenu, CMenuItem, CSubmenu, CPagination, CStepItem, CSteps, CStickyItem, CStickyTool
     , CRadioButton, CRadioGroup, CTabPanel, CTabs
 } from '@chengjian/foundation-web';
+import {
+    ExcelIcon, WordIcon, ImageIcon, PdfIcon, PptIcon,
+    ZipIcon, Mp4Icon, Mp3Icon, MarkdownIcon,
+} from '@chengjian/foundation-web';
 import type {
     CButtonProps, TypographyEllipsis, CAnchorProps, CBreadcrumbItemProps, CDropdownProps
     , CMenuProps, CPaginationProps, CStepsProps, CStickyItemProps, CStickyToolProps, CTabsProps
@@ -649,6 +673,18 @@ const handlerChange: CTabsProps['onChange'] = (newValue) => {
     value_tabs.value = newValue;
 };
 
+const files = [
+    //   { name: 'excel-file.xlsx', componentName: 'ExcelIcon', icon: ExcelIcon },
+    { name: 'word-file.docx', componentName: 'WordIcon', icon: WordIcon },
+    { name: 'image-file.png', componentName: 'ImageIcon', icon: ImageIcon },
+    { name: 'pdf-file.pdf', componentName: 'PdfIcon', icon: PdfIcon },
+    { name: 'ppt-file.pptx', componentName: 'PptIcon', icon: PptIcon },
+    { name: 'zip-file.zip', componentName: 'ZipIcon', icon: ZipIcon },
+    { name: 'video-file.mp4', componentName: 'Mp4Icon', icon: Mp4Icon },
+    { name: 'audio-file.mp3', componentName: 'Mp3Icon', icon: Mp3Icon },
+    { name: 'markdown-file.md', componentName: 'MarkdownIcon', icon: MarkdownIcon },
+];
+
 </script>
 
 <style lang="less" scoped>
@@ -782,6 +818,52 @@ const handlerChange: CTabsProps['onChange'] = (newValue) => {
 
 .t-demo-collapse-btn {
     color: #fff;
+}
+
+.file-icon-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 168px), 1fr));
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.file-icon-demo__card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    padding: 8px 12px;
+    border: 1px solid var(--td-bg-color-component, #e7e7e7);
+    border-radius: 6px;
+    background: var(--td-bg-color-secondarycontainer, #f3f3f3);
+}
+
+.file-icon-demo__icon {
+    flex: none;
+}
+
+.file-icon-demo__details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.file-icon-demo__filename {
+    overflow: hidden;
+    color: var(--td-text-color-primary, #1d2129);
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.file-icon-demo__component {
+    color: var(--td-text-color-secondary, #4e5969);
+    font-size: 12px;
+    line-height: 16px;
 }
 </style>
 
